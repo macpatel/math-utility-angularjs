@@ -1,3 +1,7 @@
+/**
+ * @author Mahesh Patel
+ * @description This file is a factory/service for palindrome functionality
+ */
 angular
 	.module('myApp')
 	.factory('palindromeFactory', ['$http', function($http){

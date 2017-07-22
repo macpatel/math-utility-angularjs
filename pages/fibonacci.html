@@ -1,19 +1,19 @@
-<div class="homepage" ng-controller="fibonacciController">
+<div class="">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="page-header">
 				<h1 class="text-center">Find Fibonacci Series</h1>
 			</div>
 			<div class="col-md-6 col-md-offset-3">
-				<div class="form-group" ng-class="{'has-error' : message}">
-					<input type="text" ng-model="fibonacciNumber" class="form-control"/>
-					<span ng-model="message" ng-show="message" class="help-block text-center">{{message}}</span>
+				<div class="form-group" ng-class="{'has-error' : $ctrl.message}">
+					<input type="text" ng-model="$ctrl.fibonacciNumber" class="form-control" placeholder="Example: 12"/>
+					<span ng-model="$ctrl.message" ng-show="$ctrl.message" class="help-block text-center">{{$ctrl.message}}</span>
 				</div>
 				<div class="form-group">
-					<div class="output-span text-center" ng-model="fibonacciSeries" ng-show="fibonacciSeries">{{fibonacciSeries}}</div>
+					<div class="output-span text-center" ng-model="$ctrl.fibonacciSeries" ng-show="$ctrl.fibonacciSeries">{{$ctrl.fibonacciSeries}}</div>
 				</div>
 				<div class="form-group col-md-6 col-md-offset-3">
-					<button type="button" class="btn btn-success form-control" ng-click="check()">Check</button>
+					<button type="button" class="btn btn-success form-control" ng-click="$ctrl.generate()">Generate</button>
 				</div>
 			</div>
 			

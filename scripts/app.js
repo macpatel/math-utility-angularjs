@@ -1,27 +1,26 @@
+/**
+ * @author Mahesh Patel
+ * @description This is the starting point of the app
+  */
 angular
 	.module('myApp', ['ngRoute', 'ngResource'])
 	.config(function($locationProvider, $routeProvider) {
+		//Application's route cofiguration
 		$routeProvider.
 			when('/', {
 			  templateUrl: '../pages/home.html'
-			  // controller: 'primeNumberController'
 			}).		
 			when('/prime', {
-			  templateUrl: '../pages/prime.html',
-			  controller: 'primeNumberController'
+			  template: '<lt-prime-number></lt-prime-number>'
 			}).			
 			when('/palindrome', {
-			  templateUrl: '../pages/palindrome.html',
-			  controller: 'palindromeController'
+			  template: '<lt-palindrome></lt-palindrome>'
 			}).
 			when('/fibonacci', {
-			  templateUrl: '../pages/fibonacci.html',
-			  controller: 'fibonacciController'
+			  template: '<lt-fibonacci></lt-fibonacci>'
 			}).
 			otherwise('/');
+		//Remove the leading # from the url
 		$locationProvider.html5Mode(true);
 	});
-	// .controller('primeNumberController', function($scope){
-	// 	$scope.primeNumber = 232;
-	// });
 
