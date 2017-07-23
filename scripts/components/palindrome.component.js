@@ -28,7 +28,8 @@ angular
 									self.message = resp.data.message;
 								}
 							
-							}, function(error){
+							})
+							.catch(function(error){
 								//this callback handles the error response
 								self.message = 'There is some issue on our side. Let us resolve and get back to you.';
 							});
